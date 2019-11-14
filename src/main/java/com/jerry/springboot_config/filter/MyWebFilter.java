@@ -47,6 +47,8 @@ public class MyWebFilter {
             if(0<hour&&hour<2)
             {
                 HttpServletResponse response=(HttpServletResponse)servletResponse;
+                response.setCharacterEncoding("UTF-8");
+                response.setContentType("application/json; charset=utf-8");
                 Map<String,Object> messageMap=new HashMap<>();
                 messageMap.put("status","1");
                 messageMap.put("message","请求时间2-24点");
